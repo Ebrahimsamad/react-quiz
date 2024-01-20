@@ -9,7 +9,7 @@ import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Footer from "./Footer";
 import Timer from "./Timer";
-import { useQuiz } from "../QuizContext";
+import { useQuiz } from "../contexts/QuizContext";
 
 export default function App() {
   const { status } = useQuiz();
@@ -32,7 +32,6 @@ export default function App() {
             </Footer>
           </>
         )}
-
         {status === "finished" && <FinishScreen />}
       </Main>
     </div>
